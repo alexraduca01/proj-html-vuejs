@@ -180,4 +180,55 @@ export const store = reactive({
             subtitle: 'rich and comfortable',
         },
     ],
+    carouselImages: [
+        {
+            thumb: 'img/black_leather_suit-200x260.jpg',
+            title: 'Black Leather Suit',
+            tags: 'Men, Jackets',
+            price: {
+                main: '$176',
+            }
+        },
+        {
+            thumb: 'img/spring_printed_dress-200x260.jpg',
+            title: 'Spring printed dress',
+            tags: 'Dress, Women',
+            price: {
+                main: '$47',
+            } 
+        },
+        {
+            thumb: 'img/modern_love_tee-200x260.jpg',
+            title: 'Modern Love Tee',
+            tags: 'Women, T-Shirts',
+            price: {
+                main: '$68',
+            } 
+        },
+        {
+            thumb: 'img/black_leather_jacket-200x260.jpg',
+            title: 'Black Jacket',
+            tags: 'Women, Jackets',
+            price: {
+                main: '$125',
+            } 
+        },
+        {
+            thumb: 'img/black_elegant_leather_jacket-200x260.jpg',
+            title: 'Black Leather Jacket',
+            tags: 'Men, Jackets, Jeans',
+            price: {
+                main: '$200',
+                promo: '$235',
+            }
+        },
+        {
+            thumb: 'img/hipster_black_top-200x260.jpg',
+            title: 'Hipster Black Top',
+            tags: 'T-Shirts, Women',
+            price: {
+                main: '$57',
+            } 
+        },
+    ],
 })

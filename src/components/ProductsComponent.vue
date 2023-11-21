@@ -15,9 +15,18 @@
                 <div class="px-5 py-2 border fs-5 unactive cursor-pointer" @click="prodType(2)">Accessories</div>
             </div>
             <div class="row">
-                <div class="col-3" v-for="card in store.featuredProducts[0][this.activeIndex]">
+                <div class="col-3" v-for="card in store.featuredProducts[0][activeIndex]">
                     <div>
-                        <img :src="card.thumb" class="w-100" :alt="card.title">
+                        <div class="position-relative img-container">
+                            <img :src="card.thumb" class="w-100" :alt="card.title">
+                            <div class="hovered-element">
+                                <div class="hovered-text">
+                                    <div><i class="fa-solid fa-cart-shopping"></i> Add to cart</div>
+                                    <div><i class="fa-solid fa-list"></i> Details</div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                     <div class="my-4">
                         <p class="fw-bold fs-5">{{ card.title }}</p>
@@ -52,6 +61,35 @@ import { store } from '../data/store.js';
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
+.hovered-text {
+    text-align: center;
+    color: $myWhite;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hovered-element {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgb(238,174,202);
+    background: linear-gradient(0deg, rgba(238,174,202,0.9) 23%, rgba(148,187,233,0.9) 79%);
+    z-index: 1000;
+    transition: height 0.2s linear;
+}
+.img-container {
+    &:hover > .hovered-element {
+        height: 100%;
+    }
+    &:hover > .hovered-element > .hovered-text {
+        display: block;
+    }
+}
+
 .line {
     border-top: 1px solid $myGray;
     width: 28%;
