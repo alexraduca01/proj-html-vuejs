@@ -162,5 +162,22 @@ export const store = reactive({
                 },
             ]
         }
-    ]
+    ],
+    collections: [
+        {
+            thumb: 'img/winter_collection_bg.jpg',
+            title: 'Winter Collection',
+            subtitle: 'stylish and warm',
+        },
+        {
+            thumb: 'img/spring_collection_bg.jpg',
+            title: 'Spring Collection',
+            subtitle: 'bright and colorful',
+        },
+        {
+            thumb: 'img/autumn_collection_bg.jpg',
+            title: 'Autumn Collection',
+            subtitle: 'rich and comfortable',
+        },
+    ],
 })

@@ -3,6 +3,7 @@
     <HeaderComponent />
     <JumbotronComponent />
     <ProductsComponent />
+    <CollectionsComponent />
   </div>
 </template>
 
@@ -10,11 +11,13 @@
 import HeaderComponent from './components/HeaderComponent.vue';
 import JumbotronComponent from './components/JumbotronComponent.vue';
 import ProductsComponent from './components/ProductsComponent.vue';
+import CollectionsComponent from './components/CollectionsComponent.vue';
   export default {
     components: {
       HeaderComponent,
       JumbotronComponent,
       ProductsComponent,
+      CollectionsComponent,
     },
     data(){
       return {
