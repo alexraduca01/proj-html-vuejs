@@ -1,8 +1,8 @@
 <template>
     <section>
-        <div class="position-relative" style="height: 779px;">
-            <div class="w-100 h-100 overflow-hidden ">
-                <img :src="store.jumboContent[imgIndex].thumb" class="w-100" :alt="store.jumboContent[imgIndex].title">
+        <div class="position-relative w-100">
+            <div class="overflow-hidden">
+                <img :src="store.jumboContent[imgIndex].thumb" class="w-100" style="height: 779px;" :alt="store.jumboContent[imgIndex].title">
             </div>
             <div class="jumbo-content text-white text-center">
                 <h2>{{ store.jumboContent[imgIndex].title }}</h2>
@@ -51,7 +51,8 @@ h2 {
     border-radius: 30px;
 }
 img {
-    object-position: 0 -50px;
+    object-fit: cover;
+    object-position: 0 10%;
 }
 .jumbo-content {
     position: absolute;
