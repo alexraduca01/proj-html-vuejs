@@ -50,6 +50,9 @@ h2 {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
 }
+.btn-bg:hover {
+    background-color: transparent !important;
+}
 img {
     object-fit: cover;
     object-position: 0 10%;

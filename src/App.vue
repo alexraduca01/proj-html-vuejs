@@ -2,16 +2,19 @@
   <div>
     <HeaderComponent />
     <JumbotronComponent />
+    <ProductsComponent />
   </div>
 </template>
 
 <script>
 import HeaderComponent from './components/HeaderComponent.vue';
 import JumbotronComponent from './components/JumbotronComponent.vue';
+import ProductsComponent from './components/ProductsComponent.vue';
   export default {
     components: {
       HeaderComponent,
       JumbotronComponent,
+      ProductsComponent,
     },
     data(){
       return {

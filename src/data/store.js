@@ -53,5 +53,114 @@ export const store = reactive({
                 text2: 'lookbook',
             },
         },
+    ],
+    featuredProducts: [
+        {
+            0: [
+                {
+                    thumb: 'img/black_elegant_leather_jacket-400x520.jpg',
+                    title: 'Black Leather Jacket',
+                    tags: 'Men, Jackets, Jeans',
+                    price: {
+                        main: '$200',
+                        promo: '$235',
+                    }
+                },
+                {
+                    thumb: 'img/black_leather_suit-400x520.jpg',
+                    title: 'Black Leather Suit',
+                    tags: 'Men, Jackets',
+                    price: {
+                        main: '$176',
+                    }
+                },
+                {
+                    thumb: 'img/blue_jacket_and_white_stripe_tee-400x520.jpg',
+                    title: 'Blue Jacket & Stripe Tee',
+                    tags: 'Men, Jackets, suits',
+                    price: {
+                        main: '$580',
+                    }
+                },
+                {
+                    thumb: 'img/modern_black_leather_suit-400x520.jpg',
+                    title: 'Modern Black Leather Suit',
+                    tags: 'Men, Jackets',
+                    price: {
+                        main: '$96',
+                    }
+                },
+            ],
+            1: [
+                {
+                    thumb: 'img/spring_printed_dress-400x520.jpg',
+                    title: 'Spring printed dress',
+                    tags: 'Dress, Women',
+                    price: {
+                        main: '$47',
+                    } 
+                },
+                {
+                    thumb: 'img/modern_love_tee-400x520.jpg',
+                    title: 'Modern Love Tee',
+                    tags: 'Women, T-Shirts',
+                    price: {
+                        main: '$68',
+                    } 
+                },
+                {
+                    thumb: 'img/black_leather_jacket-400x520.jpg',
+                    title: 'Black Jacket',
+                    tags: 'Women, Jackets',
+                    price: {
+                        main: '$125',
+                    } 
+                },
+                {
+                    thumb: 'img/hipster_black_top-400x520.jpg',
+                    title: 'Hipster Black Top',
+                    tags: 'T-Shirts, Women',
+                    price: {
+                        main: '$57',
+                    } 
+                },
+            ],
+            2: [
+                {
+                    thumb: 'img/casual_leather_belts-400x520.jpg',
+                    title: 'Casual Leather Belts',
+                    tags: 'Men, Accessories',
+                    price: {
+                        main: '$65',
+                    } 
+                },
+                {
+                    thumb: 'img/leather_gloves-400x520.jpg',
+                    title: 'Leather Gloves',
+                    tags: 'Accessories, Gloves, Men, Women',
+                    price: {
+                        main: '$45',
+                    } 
+                },
+                {
+                    thumb: 'img/modern_leather_boots-400x520.jpg',
+                    title: 'Modern Leather Boots',
+                    tags: 'Men, Accessories, Miscellaneous, Shoes',
+                    price: {
+                        main: '$30',
+                        promo: '$50',
+                    } 
+                },
+                {
+                    thumb: 'img/brown_dress_shoes-400x520.jpg',
+                    title: 'Brown Dress Shoes',
+                    tags: 'Accessories, Miscellaneous, Shoes, Women',
+                    price: {
+                        main: '$36',
+                        promo: '$40',
+                    } 
+                },
+            ]
+        }
     ]
 })
