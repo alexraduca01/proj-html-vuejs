@@ -18,26 +18,62 @@
                 </div>
             </div>
         </section>
-        
-        <div>
-
-        </div>
+        <section>
+            <div class="container d-flex justify-content-between align-items-center">
+                <div>
+                    <img src="img/classic_shop_logo1x.png" alt="logo">
+                </div>
+                <div>
+                    <ul class="list-unstyled m-0 d-flex gap-5">
+                        <li @click="changeActiveIndex(item.id)" v-for="item in store.navContent" class="py-5" :class="activeElement(item.id)"><span class="cursor-pointer">{{ item.title }} <i class="fa-solid fa-angle-down"></i></span></li>
+                        <li class="py-5"><button class="text-uppercase btn btn-primary py-1 px-4 rounded-pill">shop now!</button></li>
+                        <li class="py-5"><i class="fa-solid fa-magnifying-glass"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </header>
 </template>
 
 <script>
+import { store } from '../data/store.js';
     export default {
         name: 'HeaderComponent',
         data(){
             return {
-
+                store,
+                activeIndex: 0,
             }
+        },
+        methods: {
+            changeActiveIndex(id){
+                for(let i = 0; i < store.navContent.length; i++){
+                    if(store.navContent[i].id === id){
+                        this.activeIndex = i;
+                    };
+                };
+            },
+            activeElement(id){
+                if(store.navContent[this.activeIndex].id === id){
+                    return "active";
+                };
+            },
         }
     }
 </script>
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
+.cursor-pointer {
+    cursor: pointer;
+}
+.active {
+    border-top: 2px solid $myBlue;
+    color: $myBlue!important;
+}
+.fa-magnifying-glass{
+    font-size: 0.9rem;
+}
 .fa-angle-down{
     font-size: 0.9rem;
     cursor: pointer;
