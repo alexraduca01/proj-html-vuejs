@@ -8,6 +8,7 @@
     <PromoComponent />
     <NewArrivals />
     <AuthorComponent />
+    <BlogComponent />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import SmallCarousel from './components/SmallCarousel.vue';
 import PromoComponent from './components/PromoComponent.vue';
 import NewArrivals from './components/NewArrivals.vue';
 import AuthorComponent from './components/AuthorComponent.vue';
+import BlogComponent from './components/BlogComponent.vue';
   export default {
     components: {
       HeaderComponent,
@@ -30,6 +32,7 @@ import AuthorComponent from './components/AuthorComponent.vue';
       PromoComponent,
       NewArrivals,
       AuthorComponent,
+      BlogComponent,
     },
     data(){
       return {

@@ -252,5 +252,19 @@ export const store = reactive({
             thumb: 'img/woman_testimonial.png',
             name: 'Lisa Smith,',
         }
+    ],
+    blogContent: [
+        {
+            thumb: 'img/post_img_12-700x441.jpg',
+            title: 'Aenean Iobortis sapien enim viverra',
+        },
+        {
+            thumb: 'img/post_img_11-700x441.jpg',
+            title: 'Duis ac massa semper maximus',
+        },
+        {
+            thumb: 'img/post_img_10-700x441.jpg',
+            title: 'Nunc fermint nulla eu justo sem id',
+        },
     ]
 })

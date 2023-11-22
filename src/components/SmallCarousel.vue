@@ -126,4 +126,7 @@ h2 {
     background-color: $myGray;
     cursor: pointer;
 }
+.my-text-color {
+    color: $myGray;
+}
 </style>
