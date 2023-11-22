@@ -75,6 +75,6 @@ img {
     background-image: url('img/testimonials_home_1_bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: fixed;
+    background-attachment: fixed;
 }
 </style>

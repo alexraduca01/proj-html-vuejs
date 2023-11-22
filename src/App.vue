@@ -9,6 +9,7 @@
     <NewArrivals />
     <AuthorComponent />
     <BlogComponent />
+    <AdvertisingComponent />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import PromoComponent from './components/PromoComponent.vue';
 import NewArrivals from './components/NewArrivals.vue';
 import AuthorComponent from './components/AuthorComponent.vue';
 import BlogComponent from './components/BlogComponent.vue';
+import AdvertisingComponent from './components/AdvertisingComponent.vue';
   export default {
     components: {
       HeaderComponent,
@@ -33,6 +35,7 @@ import BlogComponent from './components/BlogComponent.vue';
       NewArrivals,
       AuthorComponent,
       BlogComponent,
+      AdvertisingComponent,
     },
     data(){
       return {

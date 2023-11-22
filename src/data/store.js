@@ -266,5 +266,120 @@ export const store = reactive({
             thumb: 'img/post_img_10-700x441.jpg',
             title: 'Nunc fermint nulla eu justo sem id',
         },
+    ],
+    advertisingContent: [
+        {
+            first: [
+                {
+                    name: 'Black Jacket',
+                    price: {
+                        main: '$125',
+                    },
+                    thumb: 'img/black_leather_jacket-120x156.jpg',
+                    stars: false,
+                },
+                {
+                    name: 'Black Leather Jacket',
+                    price: {
+                        main: '$200',
+                        promo: '$235',
+                    },
+                    thumb: 'img/black_elegant_leather_jacket-120x156.jpg',
+                    stars: true,
+                },
+                {
+                    name: 'Hipster Black Top',
+                    price: {
+                        main: '$57',
+                    },
+                    thumb: 'img/hipster_black_top-120x156.jpg',
+                    stars: false,
+                },
+            ],
+            second: [
+                {
+                    name: 'Black Leather Jacket',
+                    price: {
+                        main: '$200',
+                        promo: '$235',
+                    },
+                    thumb: 'img/black_elegant_leather_jacket-120x156.jpg',
+                    stars: true,
+                },
+                {
+                    name: 'Blue Leather Jacket',
+                    price: {
+                        main: '$60',
+                        promo: '$80',
+                    },
+                    thumb: 'img/blue_leather_jacket-120x156.jpg',
+                    stars: false,
+                },
+                {
+                    name: 'Modern Leather Boots',
+                    price: {
+                        main: '$30',
+                        promo: '$50',
+                    },
+                    thumb: 'img/modern_leather_boots-120x156.jpg',
+                    stars: false,
+                },
+            ],
+            third: [
+                {
+                    name: 'Leather Gloves',
+                    price: {
+                        main: '$45',
+                    },
+                    thumb: 'img/leather_gloves-120x156.jpg',
+                    stars: true,
+                },
+                {
+                    name: 'Black Leather Jacket',
+                    price: {
+                        main: '$200',
+                        promo: '$235',
+                    },
+                    thumb: 'img/black_elegant_leather_jacket-120x156.jpg',
+                    stars: true,
+                },
+                {
+                    name: 'Spring Printed Dress',
+                    price: {
+                        main: '$47'
+                    },
+                    thumb: 'img/spring_printed_dress-120x156.jpg',
+                    stars: true,
+                },
+            ],
+            forth: [
+                {
+                    name: 'Black Leather Jacket',
+                    price: {
+                        main: '$200',
+                        promo: '$235',
+                    },
+                    thumb: 'img/black_elegant_leather_jacket-120x156.jpg',
+                    stars: true,
+                },
+                {
+                    name: 'Leather Gloves',
+                    price: {
+                        main: '$45',
+                    },
+                    thumb: 'img/leather_gloves-120x156.jpg',
+                    stars: true,
+                },
+                {
+                    name: 'Spring Printed Dress',
+                    price: {
+                        main: '$47'
+                    },
+                    thumb: 'img/spring_printed_dress-120x156.jpg',
+                    stars: true,
+                },
+            ]
+            
+        },
     ]
 })
