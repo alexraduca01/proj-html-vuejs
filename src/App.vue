@@ -5,6 +5,7 @@
     <ProductsComponent />
     <CollectionsComponent />
     <SmallCarousel />
+    <PromoComponent />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import JumbotronComponent from './components/JumbotronComponent.vue';
 import ProductsComponent from './components/ProductsComponent.vue';
 import CollectionsComponent from './components/CollectionsComponent.vue';
 import SmallCarousel from './components/SmallCarousel.vue';
+import PromoComponent from './components/PromoComponent.vue';
   export default {
     components: {
       HeaderComponent,
@@ -21,6 +23,7 @@ import SmallCarousel from './components/SmallCarousel.vue';
       ProductsComponent,
       CollectionsComponent,
       SmallCarousel,
+      PromoComponent,
     },
     data(){
       return {

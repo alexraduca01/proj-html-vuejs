@@ -231,4 +231,14 @@ export const store = reactive({
             } 
         },
     ],
+    promoBox: {
+        promo1: {
+            thumb: 'img/promo_box_1_bg.jpg',
+            title: '70% Off',
+        },
+        promo2: {
+            thumb: 'img/promo_box_2_bg.jpg',
+            title: 'Free Shipping',
+        }
+    }
 })

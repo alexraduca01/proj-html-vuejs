@@ -69,6 +69,7 @@ import { store } from '../data/store.js';
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 .hovered-element {
     position: absolute;
@@ -105,6 +106,7 @@ h2 {
 }
 .unactive {
     background-color: $darkerWhite;
+    transition: background-color 0.2s ease-in;
 }
 .unactive:hover {
     background-color: $myWhite!important;
