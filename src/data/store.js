@@ -381,5 +381,6 @@ export const store = reactive({
             ]
             
         },
-    ]
+    ],
+    brandLogos: ['img/b_logotype_1.png', 'img/b_logotype_2.png', 'img/b_logotype_3.png', 'img/b_logotype_4.png', 'img/b_logotype_5.png', 'img/b_logotype_6.png', 'img/b_logotype_7.png',]
 })
