@@ -12,6 +12,7 @@
     <AdvertisingComponent />
     <BrandsComponent />
     <SubscribeComponent />
+    <FooterComponent />
     <PaymentsComponent />
   </div>
 </template>
@@ -30,6 +31,7 @@ import AdvertisingComponent from './components/AdvertisingComponent.vue';
 import BrandsComponent from './components/BrandsComponent.vue';
 import SubscribeComponent from './components/SubscribeComponent.vue';
 import PaymentsComponent from './components/PaymentsComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
   export default {
     components: {
       HeaderComponent,
@@ -45,6 +47,7 @@ import PaymentsComponent from './components/PaymentsComponent.vue';
       BrandsComponent,
       SubscribeComponent,
       PaymentsComponent,
+      FooterComponent,
     },
     data(){
       return {

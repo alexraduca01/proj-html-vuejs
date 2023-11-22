@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-dark p-5">
+    <div class="my-bg p-5">
         <div class="container p-5">
             <div class="row text-white justify-content-between ">
                 <div class="col-6 d-flex gap-4 align-items-center">
@@ -32,6 +32,9 @@
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
+.my-bg {
+    background-color: $darkColor;
+}
 .fa-envelope {
     padding: 1rem;
     border-radius: 50%;
