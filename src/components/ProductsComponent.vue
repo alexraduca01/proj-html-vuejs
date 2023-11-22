@@ -10,9 +10,9 @@
                 <p class="my-text-color text-center fs-5">Must have products from our top sellers</p>
             </div>
             <div class="d-flex justify-content-center align-items-center my-5">
-                <div class="px-5 py-2 border fs-5 cursor-pointer active" @click="prodType(0)">Men</div>
-                <div class="px-5 py-2 border-top border-bottom fs-5 unactive cursor-pointer" @click="prodType(1)">Women</div>
-                <div class="px-5 py-2 border fs-5 unactive cursor-pointer" @click="prodType(2)">Accessories</div>
+                <div class="px-5 py-2 border fs-5 cursor-pointer unactive" :class="{'active': activeIndex == 0, '': activeIndex !== 0}" @click="prodType(0)">Men</div>
+                <div class="px-5 py-2 border-top border-bottom fs-5 unactive cursor-pointer" :class="{'active': activeIndex == 1, '': activeIndex !== 1}" @click="prodType(1)">Women</div>
+                <div class="px-5 py-2 border fs-5 unactive cursor-pointer" :class="{'active': activeIndex == 2, '': activeIndex !== 2}" @click="prodType(2)">Accessories</div>
             </div>
             <div class="row">
                 <div class="col-3" v-for="card in store.featuredProducts[0][activeIndex]">
