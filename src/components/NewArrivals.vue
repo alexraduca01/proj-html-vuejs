@@ -1,15 +1,15 @@
 <template>
     <div class="p-5">
-        <div class="container p-0 position-relative ">
-            <div>
+        <div class="p-0 position-relative ">
+            <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="line col-4"></div>
-                    <h2 class="col-4 text-center">Best Seller</h2>
+                    <h2 class="col-4 text-center">New Arrivals</h2>
                     <div class="line col-4"></div>
                 </div>
-                <p class="my-text-color text-center fs-5">Must have products from our top sellers</p>
+                <p class="my-text-color text-center fs-5">Brand new products from top designers</p>
             </div>
-            <div ref="imgContainer" class="row overflow-hidden flex-nowrap my-5">
+            <div ref="imgContainer" class="d-flex overflow-hidden flex-nowrap my-5">
                 <div class="image-container p-0 position-relative" v-for="item in store.carouselImages">
                     <img :src="item.thumb" :alt="item.title">
                     <div class="hovered-element">
@@ -35,7 +35,7 @@
 <script>
 import { store } from '../data/store.js';
     export default {
-        name: 'SmallCarousel',
+        name: 'NewArrivals',
         data(){
             return {
                 store,
@@ -71,7 +71,7 @@ import { store } from '../data/store.js';
 .hovered-subtext {
     display: none;
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     left: 0;
 }
 .small-font {
@@ -109,7 +109,7 @@ h2 {
 .left-arrow {
     width: 25px;
     position: absolute;
-    left: -50px;
+    left: -45px;
     top: 60%;
     color: $myWhite;
     padding: 10px 8px;
@@ -119,7 +119,7 @@ h2 {
 .right-arrow {
     width: 25px;
     position: absolute;
-    right: -50px;
+    right: -45px;
     top: 60%;
     color: $myWhite;
     padding: 10px 8px;

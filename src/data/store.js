@@ -182,7 +182,7 @@ export const store = reactive({
     ],
     carouselImages: [
         {
-            thumb: 'img/black_leather_suit-200x260.jpg',
+            thumb: 'img/black_leather_suit-400x520.jpg',
             title: 'Black Leather Suit',
             tags: 'Men, Jackets',
             price: {
@@ -190,7 +190,7 @@ export const store = reactive({
             }
         },
         {
-            thumb: 'img/spring_printed_dress-200x260.jpg',
+            thumb: 'img/spring_printed_dress-400x520.jpg',
             title: 'Spring printed dress',
             tags: 'Dress, Women',
             price: {
@@ -198,7 +198,7 @@ export const store = reactive({
             } 
         },
         {
-            thumb: 'img/modern_love_tee-200x260.jpg',
+            thumb: 'img/modern_love_tee-400x520.jpg',
             title: 'Modern Love Tee',
             tags: 'Women, T-Shirts',
             price: {
@@ -206,7 +206,7 @@ export const store = reactive({
             } 
         },
         {
-            thumb: 'img/black_leather_jacket-200x260.jpg',
+            thumb: 'img/black_leather_jacket-400x520.jpg',
             title: 'Black Jacket',
             tags: 'Women, Jackets',
             price: {
@@ -214,7 +214,7 @@ export const store = reactive({
             } 
         },
         {
-            thumb: 'img/black_elegant_leather_jacket-200x260.jpg',
+            thumb: 'img/black_elegant_leather_jacket-400x520.jpg',
             title: 'Black Leather Jacket',
             tags: 'Men, Jackets, Jeans',
             price: {
@@ -223,7 +223,7 @@ export const store = reactive({
             }
         },
         {
-            thumb: 'img/hipster_black_top-200x260.jpg',
+            thumb: 'img/hipster_black_top-400x520.jpg',
             title: 'Hipster Black Top',
             tags: 'T-Shirts, Women',
             price: {
