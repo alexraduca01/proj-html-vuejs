@@ -240,5 +240,17 @@ export const store = reactive({
             thumb: 'img/promo_box_2_bg.jpg',
             title: 'Free Shipping',
         }
-    }
+    },
+    authors: [
+        {
+            id: 1,
+            thumb: 'img/man_testimonial.png',
+            name: 'Darìo Pineda,',
+        },
+        {
+            id: 2,
+            thumb: 'img/woman_testimonial.png',
+            name: 'Lisa Smith,',
+        }
+    ]
 })

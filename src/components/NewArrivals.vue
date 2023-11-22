@@ -50,6 +50,12 @@ import { store } from '../data/store.js';
                 const card = store.carouselImages.pop();
                 store.carouselImages = [card].concat(store.carouselImages);
             },
+            autoSwitch(){
+                setInterval(this.scrollRight, 2500);
+            },
+        },
+        mounted(){
+            this.autoSwitch();
         }
     }
 </script>
