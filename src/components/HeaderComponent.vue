@@ -4,7 +4,7 @@
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="d-flex gap-3">
                     <i class="fa-brands fa-facebook-f"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-youtube"></i>
                     <i class="fa-brands fa-pinterest-p"></i>
@@ -25,7 +25,21 @@
                 </div>
                 <div>
                     <ul class="list-unstyled m-0 d-flex gap-5">
-                        <li @click="changeActiveIndex(item.id)" v-for="item in store.navContent" class="py-5" :class="activeElement(item.id)"><span class="cursor-pointer">{{ item.title }} <i class="fa-solid fa-angle-down"></i></span></li>
+                        <li @click="changeActiveIndex(item.id), dropdownToggle(index)" v-for="(item, index) in store.navContent" class="py-5 position-relative" :class="activeElement(item.id)">
+                            <span class="cursor-pointer">{{ item.title }} <i class="fa-solid fa-angle-down"></i></span>
+                            <ul class="list-unstyled" v-if="item.flag">
+                                <li v-if="item.content">
+                                    <ul class="list-unstyled">
+                                        <li class="text-black border rounded my-bg-dark my-dropdown"><p class="m-0 p-2 border-bottom" v-for="obj in item.content">{{ obj }}</p></li>
+                                    </ul>
+                                </li>
+                                <li v-else class="my-dropdown2 d-flex gap-2 p-2 my-bg-dark rounded">
+                                    <div v-for="img in item.images">
+                                        <img :src="img" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="py-5"><button class="text-uppercase btn btn-primary py-1 px-4 rounded-pill">shop now!</button></li>
                         <li class="py-5"><i class="fa-solid fa-magnifying-glass"></i></li>
                     </ul>
@@ -58,12 +72,34 @@ import { store } from '../data/store.js';
                     return "active";
                 };
             },
+            dropdownToggle(index){
+                if(store.navContent[index].flag === false){
+                    store.navContent[index].flag = true;
+                }else{
+                    store.navContent[index].flag = false;
+                }
+            },
         }
     }
 </script>
 
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
+.my-dropdown2 {
+    position: absolute;
+    top: 60%;
+    left: -270px;
+    z-index: 1000;
+}
+.my-dropdown {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    z-index: 1000;
+}
+.fa-brands {
+    cursor: pointer;
+}
 .cursor-pointer {
     cursor: pointer;
 }

@@ -4,26 +4,38 @@ export const store = reactive({
         {
             id: 1,
             title: 'Home',
+            flag: false,
+            content: ['Home1', 'Home2', 'Home3'],
         },
         {
             id: 2,
             title: 'Shop',
+            flag: false,
+            content: ['Shop1', 'Shop2', 'Shop3'],
         },
         {
             id: 3,
             title: 'Products',
+            flag: false,
+            images: ['img/promotion_accessories_img-200x271.jpg', 'img/promotion_women_img-200x271.jpg', 'img/sidebar_promotion_img-200x271.jpg'],
         },
         {
             id: 4,
             title: 'Categories',
+            flag: false,
+            content: ['Category1', 'Category2', 'Category3'],
         },
         {
             id: 5,
             title: 'News',
+            flag: false,
+            content: ['News1', 'News2', 'News3'],
         },
         {
             id: 6,
             title: 'Elements',
+            flag: false,
+            content: ['Elements1', 'Elements2', 'Elements3'],
         },
     ],
     jumboContent: [
