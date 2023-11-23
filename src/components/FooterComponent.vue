@@ -2,7 +2,7 @@
     <div class="my-bg p-5">
         <div class="container p-5 text-white">
             <div class="row">
-                <div class="col-3 flex-column gap-5 d-flex">
+                <div class="col-3 flex-column justify-content-around d-flex">
                     <div>
                         <img src="img/classic_shop_logo_footer.png" class="my-logo" alt="">
                     </div>

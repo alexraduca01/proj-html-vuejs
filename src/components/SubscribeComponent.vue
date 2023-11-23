@@ -33,7 +33,7 @@
 <style lang="scss" scoped>
 @use '../assets/style/partials/variables' as *;
 .my-bg {
-    background-color: $darkColor;
+    background-color: #303337;
 }
 .fa-envelope {
     padding: 1rem;

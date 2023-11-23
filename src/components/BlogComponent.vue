@@ -9,7 +9,7 @@
             <p class="my-text-color text-center fs-5">The latest Classic Shop news</p>
             <div class="row my-5">
                 <div class="col-4" v-for="item in store.blogContent">
-                    <div class="mb-2">
+                    <div class="mb-2 overflow-hidden">
                         <img :src="item.thumb" :alt="item.title">
                     </div>
                     <div>
@@ -45,6 +45,11 @@ h2 {
 }
 img {
     width: 100%;
+    transition: all 0.6s ease-in;
+    &:hover{
+        scale: 1.2;
+        opacity: 0.9;
+    }
 }
 .line {
     border-top: 1px solid $myGray;

@@ -5,7 +5,7 @@
             <div class="row overflow-hidden flex-nowrap">
                 <swiper :loop="true" :slidesPerView="5" :spaceBetween="30" :pagination="{ clickable: true, }" :modules="modules" class="mySwiper" >
                     <swiper-slide v-for="item in store.brandLogos">
-                        <div class="img-container" >
+                        <div class="img-container cursor" >
                             <img :src="item" alt="">
                         </div>
                     </swiper-slide>
@@ -47,5 +47,8 @@ p {
 }
 .my-bg {
     background-color: $darkerWhite;
+}
+.cursor{
+    cursor: grabbing;
 }
 </style>

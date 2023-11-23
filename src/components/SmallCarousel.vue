@@ -1,7 +1,7 @@
 <template>
     <div class="p-5">
         <div class="container p-0 position-relative ">
-            <div>
+            <div class="mb-5">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="line col-4"></div>
                     <h2 class="col-4 text-center">Best Seller</h2>
