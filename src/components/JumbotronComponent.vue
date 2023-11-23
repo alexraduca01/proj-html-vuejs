@@ -1,44 +1,42 @@
 <template>
     <section>
-        <div class="position-relative w-100">
-            <div class="overflow-hidden">
-                <img :src="store.jumboContent[imgIndex].thumb" class="w-100" style="height: 779px;" :alt="store.jumboContent[imgIndex].title">
-            </div>
-            <div class="jumbo-content text-white text-center">
-                <h2>{{ store.jumboContent[imgIndex].title }}</h2>
-                <h5 class="fs-1">{{ store.jumboContent[imgIndex].subtitle }}</h5>
-                <div class="mt-5">
-                    <button class="btn border btn-bg text-white text-uppercase p-4 px-5 mx-3 fs-5" v-for="item in store.jumboContent[imgIndex].button">{{ item }}</button> 
+        <swiper class="mySwiper" :loop="true" :autoplay="{ delay: 3000, disableOnInteraction: false, }" :modules="modules">
+            <swiper-slide  v-for="item in store.jumboContent">
+                <div class="position-relative w-100">
+                    <div class="overflow-hidden">
+                        <img :src="item.thumb" class="w-100" style="height: 779px;" :alt="item.title">
+                    </div>
+                    <div class="jumbo-content text-white text-center">
+                        <h2>{{ item.title }}</h2>
+                        <h5 class="fs-1">{{ item.subtitle }}</h5>
+                        <div class="mt-5">
+                            <button class="btn border btn-bg text-white text-uppercase p-4 px-5 mx-3 fs-5" v-for="item in item.button">{{ item }}</button> 
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </swiper-slide>
+        </swiper>
     </section>
+    
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
 import { store } from '../data/store.js';
+import { Autoplay } from 'swiper/modules'
     export default {
+        components: {
+            Swiper,
+            SwiperSlide,
+        },
         name: 'JumbotronComponent',
         data(){
             return {
                 store,
-                imgIndex: 2,
+                modules: [Autoplay],
             }
         },
-        methods: {
-            switchImage(){
-                this.imgIndex++;
-                if(this.imgIndex > store.jumboContent.length - 1) {
-                    this.imgIndex = 0;
-                };
-            },
-            autoSwitch(){
-                setInterval(this.switchImage, 5000);
-            },
-        },
-        mounted(){
-            this.autoSwitch();
-        }
     }
 </script>
 
