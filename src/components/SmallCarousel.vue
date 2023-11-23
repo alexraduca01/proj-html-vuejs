@@ -42,7 +42,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
-import { Navigation } from 'swiper/modules';
 import { store } from '../data/store.js';
     export default {
         components: {
@@ -53,7 +52,7 @@ import { store } from '../data/store.js';
         data(){
             return {
                 store,
-                modules: [Navigation, Autoplay],
+                modules: [Autoplay],
             }
         },
     }

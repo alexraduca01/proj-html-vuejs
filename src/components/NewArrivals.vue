@@ -1,7 +1,7 @@
 <template>
     <div class="p-5">
-        <div class="p-0 position-relative ">
-            <div class="container">
+        <div class="p-0 position-relative">
+            <div class="container mb-5">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="line col-4"></div>
                     <h2 class="col-4 text-center">New Arrivals</h2>
@@ -9,54 +9,48 @@
                 </div>
                 <p class="my-text-color text-center fs-5">Brand new products from top designers</p>
             </div>
-            <div ref="imgContainer" class="d-flex overflow-hidden flex-nowrap my-5">
-                <div class="image-container p-0 position-relative" v-for="item in store.carouselImages">
-                    <img :src="item.thumb" :alt="item.title">
-                    <div class="hovered-element">
-                        <div class="hovered-text text-white text-center">
-                            <p class="fw-bold m-0">{{ item.title }}</p>
-                            <p class="small-font">{{ item.tags }}</p>
-                            <span class="text-decoration-line-through me-2">{{ item.price.promo }}</span>
-                            <span>{{ item.price.main }}</span>
-                        </div>
-                        <div class="hovered-subtext justify-content-around w-100 small-font text-white">
-                            <div><i class="fa-solid fa-cart-shopping"></i> Add to cart</div>
-                            <div><i class="fa-solid fa-list"></i> Details</div>
+            <swiper :loop="true" :autoplay="{ delay: 2500, disableOnInteraction: false,}" :slidesPerView="5" :spaceBetween="30" :modules="modules" class="mySwiper">
+                <swiper-slide v-for="item in store.carouselImages">
+                    <div class="image-container p-0 position-relative">
+                        <img :src="item.thumb" :alt="item.title">
+                        <div class="hovered-element">
+                            <div class="hovered-text text-white text-center">
+                                <p class="fw-bold m-0">{{ item.title }}</p>
+                                <p class="small-font">{{ item.tags }}</p>
+                                <span class="text-decoration-line-through me-2">{{ item.price.promo }}</span>
+                                <span>{{ item.price.main }}</span>
+                            </div>
+                            <div class="hovered-subtext justify-content-around w-100 small-font text-white">
+                                <div><i class="fa-solid fa-cart-shopping"></i> Add to cart</div>
+                                <div><i class="fa-solid fa-list"></i> Details</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <span class="left-arrow" @click="scrollLeft()"><i class="fa-solid fa-angle-left"></i></span>
-            <span class="right-arrow" @click="scrollRight()"><i class="fa-solid fa-angle-right"></i></span>
+                </swiper-slide>
+            </swiper>
         </div>
     </div>
+    
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
 import { store } from '../data/store.js';
     export default {
+        components: {
+            Swiper,
+            SwiperSlide,
+        },
         name: 'NewArrivals',
         data(){
             return {
                 store,
+                modules: [Autoplay],
             }
         },
-        methods: {
-            scrollRight(){
-                const card = store.carouselImages.shift();
-                store.carouselImages = store.carouselImages.concat(card);
-            },
-            scrollLeft(){
-                const card = store.carouselImages.pop();
-                store.carouselImages = [card].concat(store.carouselImages);
-            },
-            autoSwitch(){
-                setInterval(this.scrollRight, 2500);
-            },
-        },
-        mounted(){
-            this.autoSwitch();
-        }
     }
 </script>
 
@@ -94,7 +88,6 @@ img {
     transform: translate(-50%, -50%);
 }
 .image-container {
-    width: calc(100% / 5);
     &:hover > .hovered-element {
         height: 100%;
     }
